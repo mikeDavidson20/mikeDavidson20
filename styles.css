@@ -1,0 +1,106 @@
+:root {
+  color-scheme: dark;
+  --bg: #0f1222;
+  --panel: #1a2040;
+  --accent: #68d8ff;
+  --text: #e8ecff;
+  --danger: #ff7f99;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, sans-serif;
+  background: radial-gradient(circle at top, #1f2550, var(--bg));
+  color: var(--text);
+}
+
+header, footer {
+  text-align: center;
+  padding: 1rem;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.panel {
+  background: color-mix(in oklab, var(--panel), black 10%);
+  border: 1px solid color-mix(in oklab, var(--accent), black 40%);
+  border-radius: 12px;
+  padding: 1rem;
+  min-height: 220px;
+}
+
+#battle-canvas {
+  width: 100%;
+  max-width: 420px;
+  border: 1px solid #4d5c92;
+  border-radius: 8px;
+  background: linear-gradient(#192142, #0e1430);
+}
+
+#regions button,
+.actions button,
+.party-card button {
+  border: 1px solid #5970c9;
+  background: #25316a;
+  color: var(--text);
+  border-radius: 8px;
+  padding: 0.45rem 0.65rem;
+  margin: 0.25rem;
+  cursor: pointer;
+}
+
+#regions button:hover,
+.actions button:hover,
+.party-card button:hover {
+  background: #314192;
+}
+
+#battle-log {
+  min-height: 2.8em;
+  padding: 0.5rem 0;
+  color: #d4e6ff;
+}
+
+#party {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.party-card {
+  display: grid;
+  grid-template-columns: 56px 1fr auto;
+  align-items: center;
+  gap: 0.7rem;
+  border: 1px solid #3a4a87;
+  border-radius: 8px;
+  padding: 0.45rem;
+  background: #141a34;
+}
+
+.sprite {
+  width: 48px;
+  height: 48px;
+  image-rendering: pixelated;
+  border: 1px solid #5e6faa;
+  border-radius: 6px;
+  background: #090d22;
+}
+
+ol li.done {
+  color: #8ef8ac;
+}
+
+ol li.pending {
+  color: #ffd18f;
+}
+
+small {
+  opacity: 0.75;
+}

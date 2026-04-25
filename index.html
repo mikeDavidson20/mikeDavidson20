@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mythimon Legends</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Mythimon Legends</h1>
+      <p>Capture, evolve, and conquer 10 world bosses.</p>
+    </header>
+
+    <main>
+      <section class="panel" id="world-panel">
+        <h2>World Map</h2>
+        <div id="regions"></div>
+      </section>
+
+      <section class="panel" id="battle-panel">
+        <h2>Encounter</h2>
+        <canvas id="battle-canvas" width="420" height="260" aria-label="Battle scene"></canvas>
+        <div id="battle-log">Select a region to begin your adventure.</div>
+        <div class="actions">
+          <button id="btn-attack">Attack</button>
+          <button id="btn-catch">Capture</button>
+          <button id="btn-evolve">Evolve Active</button>
+        </div>
+      </section>
+
+      <section class="panel" id="party-panel">
+        <h2>Your Team</h2>
+        <div id="party"></div>
+      </section>
+
+      <section class="panel" id="boss-panel">
+        <h2>Main Bosses (10)</h2>
+        <ol id="boss-list"></ol>
+      </section>
+    </main>
+
+    <footer>
+      <small>Procedurally generated 40-species creature roster with 4 evolution stars each.</small>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="game.js"></script>
+  </body>
+</html>
