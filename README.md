@@ -19,6 +19,17 @@ python3 -m http.server 8000
 # then open http://localhost:8000
 ```
 
+## Deploy on Vercel
+
+This project is now configured for Vercel static hosting via `vercel.json` (SPA rewrite to `index.html` + cache headers for JS/CSS).
+
+1. Push this repo to GitHub/GitLab/Bitbucket.
+2. Import the repo in Vercel.
+3. Framework preset: **Other** (no build command needed).
+4. Deploy.
+
+Vercel will serve `index.html` for app routes and cache assets efficiently.
+
 ## Gameplay loop
 
 1. Select a region on the world panel.
