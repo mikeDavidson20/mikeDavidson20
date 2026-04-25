@@ -1,0 +1,100 @@
+:root {
+  color-scheme: dark;
+  --bg: #0f172a;
+  --card: #1e293b;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --buy: #22c55e;
+  --sell: #ef4444;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  width: min(1100px, 92vw);
+  margin: 0 auto;
+}
+
+.header {
+  border-bottom: 1px solid #334155;
+  margin-bottom: 1.5rem;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+a {
+  color: #93c5fd;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border-bottom: 1px solid #334155;
+  text-align: left;
+  padding: 0.75rem;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid #334155;
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
+.stack-lg {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.badge-buy,
+.badge-sell {
+  display: inline-block;
+  font-weight: 600;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+}
+
+.badge-buy {
+  color: #052e16;
+  background: var(--buy);
+}
+
+.badge-sell {
+  color: #450a0a;
+  background: var(--sell);
+}
+
+.news-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.meta {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
