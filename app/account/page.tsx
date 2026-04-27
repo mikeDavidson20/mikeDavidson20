@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { supabase } from '@/lib/supabase';
+import { getSupabaseBrowserClient } from '@/lib/supabase';
 
 export default function AccountPage() {
   const [email, setEmail] = useState<string>('');
@@ -9,6 +9,7 @@ export default function AccountPage() {
 
   useEffect(() => {
     const load = async () => {
+      const supabase = getSupabaseBrowserClient();
       const { data: userData } = await supabase.auth.getUser();
       setEmail(userData.user?.email ?? 'Not signed in');
       if (userData.user) {

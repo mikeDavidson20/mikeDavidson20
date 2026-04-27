@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { supabase } from '@/lib/supabase';
+import { getSupabaseBrowserClient } from '@/lib/supabase';
 
 export default function AuthPage() {
   const [email, setEmail] = useState('');
@@ -9,6 +9,7 @@ export default function AuthPage() {
 
   const signIn = async (e: React.FormEvent) => {
     e.preventDefault();
+    const supabase = getSupabaseBrowserClient();
     const { error } = await supabase.auth.signInWithOtp({ email, options: { emailRedirectTo: `${window.location.origin}/dashboard` } });
     setMessage(error ? error.message : 'Check your email for the magic link.');
   };

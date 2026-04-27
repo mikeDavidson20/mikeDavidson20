@@ -28,6 +28,8 @@ Production-ready full-stack SaaS starter for NBA player props analytics.
 ## Environment Variables
 Copy `.env.example` to `.env.local` and populate values.
 
+> Important: server integrations now guard against missing env vars at runtime and return safe JSON errors instead of crashing deployment/build execution.
+
 ## Local Development
 ```bash
 npm install
